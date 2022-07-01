@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  outline-style: inset 5px, 5px, 12px rgb(12, 12, 12);
+  outline-offset: 15px;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to right, #eaeceb, #f795fe);
+}
+
+.Calc-grid {
+  display: grid;
+  margin-top: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: inset 5px, 5px, 12px #ffff, 5px, 5px, 12px rgba(0, 0, 0, 0.16);
+}
+.Button {
+  padding: 15px;
+  border-radius: 30px;
+}
+.Calc-grid > button:hover,
+.Calc-grid > button:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  box-shadow: inset 5px, 5px, 12px #ffff, 5px, 5px, 12px rgba(0, 0, 0, 0.16);
+}
+
+.Span-two {
+  grid-column: span 2;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: inset 5px, 5px, 12px #ffff, 5px, 5px, 12px rgba(0, 0, 0, 0.16);
+}
+.Output {
+  grid-column: 1/-1;
+  background-color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 30px;
+  outline-offset: 15px;
+}
+.Output .Prev-operand {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 1.5rem;
+}
+
+.Output .Current-operand {
+  color: rgb(6, 6, 6);
+  font-size: 2.5rem;
+}
